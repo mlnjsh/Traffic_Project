@@ -1,0 +1,25 @@
+# Core
+fastapi==0.115.6
+uvicorn[standard]==0.34.0
+pydantic==2.10.4
+pydantic-settings==2.7.1
+
+# Async HTTP client
+httpx==0.28.1
+
+# Database
+sqlalchemy[asyncio]==2.0.36
+asyncpg==0.30.0
+alembic==1.14.1
+geoalchemy2==0.15.2
+
+# Redis
+redis[hiredis]==5.2.1
+
+# Scheduler
+apscheduler==3.10.4
+
+# Utilities
+python-dotenv==1.0.1
+orjson==3.10.13
+shapely==2.0.6

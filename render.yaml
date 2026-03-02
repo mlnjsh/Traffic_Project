@@ -1,0 +1,21 @@
+services:
+  - type: web
+    name: bangalore-traffic-api
+    runtime: docker
+    dockerfilePath: ./backend/Dockerfile
+    dockerContext: ./backend
+    plan: free
+    envVars:
+      - key: ENVIRONMENT
+        value: production
+      - key: DEMO_MODE
+        value: "true"
+      - key: CORS_ORIGINS
+        sync: false  # set manually in Render dashboard
+      - key: TOMTOM_API_KEY
+        sync: false
+      - key: ASTRAM_API_URL
+        sync: false
+      - key: ASTRAM_API_KEY
+        sync: false
+    healthCheckPath: /health
